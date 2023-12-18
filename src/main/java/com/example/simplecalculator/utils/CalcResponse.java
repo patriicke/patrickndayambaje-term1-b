@@ -1,9 +1,17 @@
 package com.example.simplecalculator.utils;
 
 public class CalcResponse {
-    private int calcResponse;
+    private Number calcResponse;
 
-    public CalcResponse(int calcResponse) {
+    public CalcResponse(Number calcResponse) {
+        this.calcResponse = calcResponse;
+    }
+
+    public Number getCalcResponse() {
+        return calcResponse;
+    }
+
+    public void setCalcResponse(Number calcResponse) {
         this.calcResponse = calcResponse;
     }
 }

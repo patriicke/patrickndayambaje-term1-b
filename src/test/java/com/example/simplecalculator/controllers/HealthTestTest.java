@@ -18,7 +18,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(HealthTest.class)
-@Log4j
 public class HealthTestTest {
     @Autowired
     private MockMvc mockMvc;
@@ -33,10 +32,10 @@ public class HealthTestTest {
         MvcResult result = mockMvc
                 .perform(request)
                 .andExpect(status().isOk())
-                .andExpect(content().string("hello world!"))
+                .andExpect(content().string("Server is up and running!"))
                 .andReturn();
 
-        assertEquals("hello world!", result.getResponse().getContentAsString());
+        assertEquals("Server is up and running!", result.getResponse().getContentAsString());
 
     }
 }
