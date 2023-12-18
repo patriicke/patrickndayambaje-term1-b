@@ -17,7 +17,7 @@ public class MathOperationImpl  implements MathOperation {
             case "/" -> operand1 / operand2;
             case "+" -> operand1 + operand2;
             case "-" -> operand1 - operand2;
-            default -> throw new RuntimeException("Unknown operation");
+            default -> throw new RuntimeException("Invalid operation");
         };
     }
 }
